@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 
-"""This Function Print a string in uppercase."""
-"""@str: Is a string to be printed In uppercase."""
 def uppercase(str):
-    for six in str:
-        if ord(six) >= 97 and ord(six) <= 122:
-            six = chr(ord(six) - 32)
-        print("{}".format(six), end="")
+    """This Functoin Print a string in uppercase."""
+    for c in str:
+        if ord(c) >= 97 and ord(c) <= 122:
+            c = chr(ord(c) - 32)
+        print("{}".format(c), end="")
     print("")
