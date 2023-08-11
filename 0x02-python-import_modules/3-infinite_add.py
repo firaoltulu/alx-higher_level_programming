@@ -4,11 +4,10 @@
 if __name__ == "__main__":
     import sys
 
-    arguments = sys.argv[1:]
-    def custom_add(*arguments):
-        total = sum(int(arg) for arg in arguments)
+    one = sys.argv[1:]
+    def custom_add(*two):
+        total = sum(int(arg) for arg in two)
         return total
 
-   arguments = sys.argv[1:]
-    result = custom_add(*arguments)
+    result = custom_add(*one)
     print("{}".format(result))
