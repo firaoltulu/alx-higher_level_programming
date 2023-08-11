@@ -3,8 +3,8 @@
 """This Program Handle basic arithmetic operations."""
 if __name__ == "__main__":
     import sys
-    from calculator_1 import add as loc_add, sub as loc_sub, mul as loc_mul, div as loc_div 
-    
+    from calculator_1 import add as loc_add, sub as loc_sub, mul as loc_mul, div as loc_div
+
     if len(sys.argv) - 1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
