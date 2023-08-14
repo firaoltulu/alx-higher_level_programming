@@ -12,54 +12,54 @@ int is_palindrome(listint_t **head);
  */
 int is_palindrome(listint_t **head)
 {
-    listint_t *one, *two, *three;
-    size_t four = 0, i;
+	listint_t *one, *two, *three;
+	size_t four = 0, i;
 
-    if (*head == NULL || (*head)->next == NULL)
-    {
-        return (1);
-    }
-    else
-    {
-        one = *head;
-        while (one)
-        {
-            four++;
-            one = one->next;
-        }
+	if (*head == NULL || (*head)->next == NULL)
+	{
+		return (1);
+	}
+	else
+	{
+		one = *head;
+		while (one)
+		{
+			four++;
+			one = one->next;
+		}
 
-        one = *head;
-        for (i = 0; i < (four / 2) - 1; i++)
-            one = one->next;
+		one = *head;
+		for (i = 0; i < (four / 2) - 1; i++)
+			one = one->next;
 
-        if ((four % 2) == 0 && one->n != one->next->n)
-        {
-            return (0);
-        }
-        else
-        {
-            one = one->next->next;
-            two = local_reverse_listint(&one);
-            three = two;
+		if ((four % 2) == 0 && one->n != one->next->n)
+		{
+			return (0);
+		}
+		else
+		{
+			one = one->next->next;
+			two = local_reverse_listint(&one);
+			three = two;
 
-            one = *head;
-            while (two)
-            {
-                if (one->n != two->n)
-                {
-                    return (0);
-                }
-                else
-                {
-                    one = one->next;
-                    two = two->next;
-                }
-            }
-            local_reverse_listint(&three);
+			one = *head;
+			while (two)
+			{
+				if (one->n != two->n)
+				{
+					return (0);
+				}
+				else
+				{
+					one = one->next;
+					two = two->next;
+				}
+			}
+			local_reverse_listint(&three);
 
-            return (1);
-        }
-    }
+			return (1);
+		}
+	}
 }
 
 /**
@@ -72,16 +72,16 @@ int is_palindrome(listint_t **head)
  */
 listint_t *local_reverse_listint(listint_t **one)
 {
-    listint_t *two = *one, *three, *four = NULL;
+	listint_t *two = *one, *three, *four = NULL;
 
-    while (two)
-    {
-        three = two->next;
-        two->next = four;
-        four = two;
-        two = three;
-    }
+	while (two)
+	{
+		three = two->next;
+		two->next = four;
+		four = two;
+		two = three;
+	}
 
-    *one = four;
-    return (*one);
+	*one = four;
+	return (*one);
 }
