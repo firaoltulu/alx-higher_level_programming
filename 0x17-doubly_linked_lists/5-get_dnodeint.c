@@ -13,24 +13,24 @@
  **/
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-    unsigned int two;
-    dlistint_t *six;
+	unsigned int two;
+	dlistint_t *six;
 
-    two = 0;
-    if (head == NULL)
-    {
-        return (NULL);
-    }
-    else
-    {
-        six = head;
-        while (six)
-        {
-            if (index == two)
-                return (six);
-            two++;
-            six = six->next;
-        }
-        return (NULL);
-    }
+	two = 0;
+	if (head == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		six = head;
+		while (six)
+		{
+			if (index == two)
+				return (six);
+			two++;
+			six = six->next;
+		}
+		return (NULL);
+	}
 }

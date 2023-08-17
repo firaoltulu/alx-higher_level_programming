@@ -13,34 +13,34 @@
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-    dlistint_t *three;
-    dlistint_t *four;
+	dlistint_t *three;
+	dlistint_t *four;
 
-    four = malloc(sizeof(dlistint_t));
-    if (four == NULL)
-    {
-        return (NULL);
-    }
-    else
-    {
-        four->n = n;
-        four->next = NULL;
+	four = malloc(sizeof(dlistint_t));
+	if (four == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		four->n = n;
+		four->next = NULL;
 
-        three = *head;
+		three = *head;
 
-        if (three != NULL)
-        {
-            while (three->next != NULL)
-                three = three->next;
-            three->next = four;
-        }
-        else
-        {
-            *head = four;
-        }
+		if (three != NULL)
+		{
+			while (three->next != NULL)
+				three = three->next;
+			three->next = four;
+		}
+		else
+		{
+			*head = four;
+		}
 
-        four->prev = three;
+		four->prev = three;
 
-        return (four);
-    }
+		return (four);
+	}
 }

@@ -11,25 +11,25 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-    int two;
+	int two;
 
-    two = 0;
+	two = 0;
 
-    if (h == NULL)
-    {
-        return (two);
-    }
-    else
-    {
-        while (h->prev != NULL)
-            h = h->prev;
+	if (h == NULL)
+	{
+		return (two);
+	}
+	else
+	{
+		while (h->prev != NULL)
+			h = h->prev;
 
-        while (h != NULL)
-        {
-            two++;
-            h = h->next;
-        }
+		while (h != NULL)
+		{
+			two++;
+			h = h->next;
+		}
 
-        return (two);
-    }
+		return (two);
+	}
 }
