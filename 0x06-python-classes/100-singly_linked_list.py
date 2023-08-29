@@ -1,12 +1,18 @@
 #!/usr/bin/python3
+"""Define a class Square."""
 
 class Node:
-    """This class Represent a node in a singly-linked list."""
+    """This class Represent a node in a singly-linked list.
+
+    Attributes:
+        data (int): Size of the new square.
+        next_node (Node): Size of the new square.
+    """
 
     def __init__(self, data, next_node=None):
         """This Method Initialize a new Node.
 
-        Arguments:
+        Args:
             data (int): Int that contains
                         The data of the new Node.
             next_node (Node): The next node of the new Node.
@@ -38,7 +44,11 @@ class Node:
         self.__next_node = value
 
 class SinglyLinkedList:
-    """This class Represent a singly-linked list."""
+    """This class Represent a singly-linked list.
+
+    Attributes:
+        __head (Node): Size of the new square.
+    """
 
     def __init__(self):
         """This Method Initalize a new SinglyLinkedList."""
@@ -46,9 +56,6 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """This Method Insert a new Node to the SinglyLinkedList.
-
-        The node is inserted into the list at the correct
-        ordered numerical position.
 
         Args:
             value (Node): Node type that contains The new Node
@@ -70,7 +77,7 @@ class SinglyLinkedList:
             two.next_node = one
 
     def __str__(self):
-        """This Method Define the print() representation of a SinglyLinkedList."""
+        """This Method Define the print() Representation of a SinglyLinkedList."""
         two = []
         one = self.__head
         while one is not None:

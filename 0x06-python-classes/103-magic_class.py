@@ -1,17 +1,22 @@
 #!/usr/bin/python3
+"""Define a class Square."""
 
 import math
 
 class MagicClass:
-    """This Class Represent a circle."""
+    """This Class Represent a circle.
+
+    Attributes:
+        __radius (int): size of the new square.
+    """
 
     def __init__(self, radius=0):
         """This Method Initialize a MagicClass.
 
-        Arguments:
+        Args:
             radius (int): int that contains
-                                The radius of the new MagicClass
-                                default to 0.
+                          The radius of the new MagicClass
+                          default to 0.
         """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
