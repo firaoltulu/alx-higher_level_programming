@@ -52,9 +52,9 @@ if __name__ == "__main__":
             function_three(ten)
             if function_two(ten, five):
                 two[ten][1] = five
-                if (ten == one - 1):  
+                if (ten == one - 1):
                     print(two)
                 else:
-                    function_four(ten + 1)  
+                    function_four(ten + 1)
 
     function_four(0)

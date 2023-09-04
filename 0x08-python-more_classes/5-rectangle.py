@@ -58,8 +58,8 @@ class Rectangle:
         one = ""
         if self.__width != 0 and self.__height != 0:
             one += "\n".join("#" * self.__width
-                                for j in range(self.__height))
-        return one
+                    for j in range(self.__height))
+            return one
 
     def __repr__(self):
         """this returns a string representation of the rectangle for reproduction"""
