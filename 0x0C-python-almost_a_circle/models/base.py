@@ -127,7 +127,7 @@ class Base:
                     three = ["id", "size", "x", "y"]
                 four = csv.DictReader(two, fieldnames=three)
                 four = [dict([five, int(six)] for five, six in seven.items())
-                              for seven in four]
+                        for seven in four]
                 return [cls.create(**seven) for seven in four]
         except IOError:
             return []
